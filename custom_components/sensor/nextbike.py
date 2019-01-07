@@ -32,6 +32,10 @@ ATTR_PLACES = 'places'
 ATTR_CITIES = 'cities'
 ATTR_COUNTRIES = 'countries'
 
+ATTR_CLOSEST_LATITUDE = 'closest_latitude'
+ATTR_CLOSEST_LONGITUDE = 'closest_longitude'
+ATTR_CLOSEST_BIKES = 'closest_bikes'
+
 CONF_CITY_ID = 'city_id'
 
 DEFAULT_ENDPOINT = 'https://api.nextbike.net/{uri}'
@@ -55,6 +59,7 @@ PLACE_SCHEMA = vol.Schema({
     vol.Required('lng'): cv.longitude,
     vol.Required('name'): cv.string,
     vol.Required('bikes'): cv.positive_int,
+    vol.Required('bike_numbers'): [cv.string],
     vol.Required('place_type'): cv.positive_int,
     vol.Required('terminal_type'): cv.string,
 }, extra=vol.REMOVE_EXTRA)
@@ -156,6 +161,9 @@ class NextbikeSensor(Entity):
         self._longitude = longitude
         self._name = name
         self._state = None
+        self._closest_latitude = None
+        self._closest_longitude = None
+        self._closest_bikes = None
 
     @property
     def state(self):
@@ -171,11 +179,29 @@ class NextbikeSensor(Entity):
         """Update sensor state."""
         if self._city.ready.is_set():
             available_bikes = 0
+            closest_distance = self._radius
             for place in self._city.places:
                 distance = location.distance(self._latitude, self._longitude, place['lat'], place['lng'])
                 if distance < self._radius:
                     available_bikes += place['bikes']
+
+                if place['bikes'] > 0 and distance < closest_distance:
+                    self._closest_latitude = place['lat']
+                    self._closest_longitude = place['lng']
+                    self._closest_bikes = ','.join(map(str, place['bike_numbers']))
+
             self._state = available_bikes
+
+    @property
+    def device_state_attributes(self):
+        """Return the state attributes."""
+        if self._state:
+            return {
+                ATTR_CLOSEST_LATITUDE: self._closest_latitude,
+                ATTR_CLOSEST_LONGITUDE: self._closest_longitude,
+                ATTR_CLOSEST_BIKES: self._closest_bikes
+            }
+        return None
 
     @property
     def unit_of_measurement(self):
