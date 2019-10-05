@@ -1,0 +1,10 @@
+{
+  "domain": "nextbike",
+  "name": "Nextbike integration for Home Assistant",
+  "documentation": "https://github.com/syssi/nextbike",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [
+    "@syssi"
+  ]
+}
