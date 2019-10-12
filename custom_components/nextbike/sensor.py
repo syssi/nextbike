@@ -14,9 +14,19 @@ import voluptuous as vol
 
 from homeassistant.components.sensor import ENTITY_ID_FORMAT, PLATFORM_SCHEMA
 from homeassistant.const import (
-    ATTR_ATTRIBUTION, ATTR_ID, ATTR_LATITUDE, ATTR_LOCATION, ATTR_LONGITUDE,
-    ATTR_NAME, CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME, CONF_RADIUS,
-    LENGTH_FEET, LENGTH_METERS)
+    ATTR_ATTRIBUTION,
+    ATTR_ID,
+    ATTR_LATITUDE,
+    ATTR_LOCATION,
+    ATTR_LONGITUDE,
+    ATTR_NAME,
+    CONF_LATITUDE,
+    CONF_LONGITUDE,
+    CONF_NAME,
+    CONF_RADIUS,
+    LENGTH_FEET,
+    LENGTH_METERS,
+)
 from homeassistant.exceptions import PlatformNotReady
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 import homeassistant.helpers.config_validation as cv
@@ -26,72 +36,76 @@ from homeassistant.util import distance, location
 
 _LOGGER = logging.getLogger(__name__)
 
-PLATFORM = 'nextbike'
+PLATFORM = "nextbike"
 
-ATTR_PLACES = 'places'
-ATTR_CITIES = 'cities'
-ATTR_COUNTRIES = 'countries'
+ATTR_PLACES = "places"
+ATTR_CITIES = "cities"
+ATTR_COUNTRIES = "countries"
 
-ATTR_BIKES = 'bikes'
-ATTR_DISTANCE = 'distance'
+ATTR_BIKES = "bikes"
+ATTR_DISTANCE = "distance"
 
-ATTR_CLOSEST_LATITUDE = 'closest_latitude'
-ATTR_CLOSEST_LONGITUDE = 'closest_longitude'
-ATTR_CLOSEST_BIKES = 'closest_bikes'
-ATTR_CLOSEST_DISTANCE = 'closest_distance'
+ATTR_CLOSEST_LATITUDE = "closest_latitude"
+ATTR_CLOSEST_LONGITUDE = "closest_longitude"
+ATTR_CLOSEST_BIKES = "closest_bikes"
+ATTR_CLOSEST_DISTANCE = "closest_distance"
 
-CONF_CITY_ID = 'city_id'
+CONF_CITY_ID = "city_id"
 
-DEFAULT_ENDPOINT = 'https://api.nextbike.net/{uri}'
-MAPS_URI = 'maps/nextbike-live.json?&city={city}'
+DEFAULT_ENDPOINT = "https://api.nextbike.net/{uri}"
+MAPS_URI = "maps/nextbike-live.json?&city={city}"
 
 REQUEST_TIMEOUT = 5  # In seconds; argument to asyncio.timeout
 
 SCAN_INTERVAL = timedelta(minutes=5)  # Timely, and doesn't suffocate the API
 
-PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
-    vol.Required(CONF_CITY_ID): cv.positive_int,
-    vol.Required(CONF_RADIUS, default=500): cv.positive_int,
-    vol.Optional(CONF_NAME, default='nextbike'): cv.string,
-    vol.Inclusive(CONF_LATITUDE, 'coordinates'): cv.latitude,
-    vol.Inclusive(CONF_LONGITUDE, 'coordinates'): cv.longitude,
-})
+PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
+    {
+        vol.Required(CONF_CITY_ID): cv.positive_int,
+        vol.Required(CONF_RADIUS, default=500): cv.positive_int,
+        vol.Optional(CONF_NAME, default="nextbike"): cv.string,
+        vol.Inclusive(CONF_LATITUDE, "coordinates"): cv.latitude,
+        vol.Inclusive(CONF_LONGITUDE, "coordinates"): cv.longitude,
+    }
+)
 
-PLACE_SCHEMA_UID = 'uid'
-PLACE_SCHEMA_LATITUDE = 'lat'
-PLACE_SCHEMA_LONGITUDE = 'lng'
-PLACE_SCHEMA_NAME = 'name'
-PLACE_SCHEMA_BIKES = 'bikes'
-PLACE_SCHEMA_BIKE_NUMBERS = 'bike_numbers'
-PLACE_SCHEMA_PLACE_TYPE = 'place_type'
-PLACE_SCHEMA_TERMINAL_TYPE = 'terminal_type'
+PLACE_SCHEMA_UID = "uid"
+PLACE_SCHEMA_LATITUDE = "lat"
+PLACE_SCHEMA_LONGITUDE = "lng"
+PLACE_SCHEMA_NAME = "name"
+PLACE_SCHEMA_BIKES = "bikes"
+PLACE_SCHEMA_BIKE_NUMBERS = "bike_numbers"
+PLACE_SCHEMA_PLACE_TYPE = "place_type"
+PLACE_SCHEMA_TERMINAL_TYPE = "terminal_type"
 
-PLACE_SCHEMA = vol.Schema({
-    vol.Required(PLACE_SCHEMA_UID): cv.positive_int,
-    vol.Required(PLACE_SCHEMA_LATITUDE): cv.latitude,
-    vol.Required(PLACE_SCHEMA_LONGITUDE): cv.longitude,
-    vol.Required(PLACE_SCHEMA_NAME): cv.string,
-    vol.Required(PLACE_SCHEMA_BIKES): cv.positive_int,
-    vol.Required(PLACE_SCHEMA_BIKE_NUMBERS): [cv.string],
-    vol.Required(PLACE_SCHEMA_PLACE_TYPE): cv.positive_int,
-    vol.Required(PLACE_SCHEMA_TERMINAL_TYPE): cv.string,
-}, extra=vol.REMOVE_EXTRA)
+PLACE_SCHEMA = vol.Schema(
+    {
+        vol.Required(PLACE_SCHEMA_UID): cv.positive_int,
+        vol.Required(PLACE_SCHEMA_LATITUDE): cv.latitude,
+        vol.Required(PLACE_SCHEMA_LONGITUDE): cv.longitude,
+        vol.Required(PLACE_SCHEMA_NAME): cv.string,
+        vol.Required(PLACE_SCHEMA_BIKES): cv.positive_int,
+        vol.Required(PLACE_SCHEMA_BIKE_NUMBERS): [cv.string],
+        vol.Required(PLACE_SCHEMA_PLACE_TYPE): cv.positive_int,
+        vol.Required(PLACE_SCHEMA_TERMINAL_TYPE): cv.string,
+    },
+    extra=vol.REMOVE_EXTRA,
+)
 
-CITY_SCHEMA = vol.Schema({
-    vol.Required(ATTR_PLACES): [PLACE_SCHEMA],
-}, extra=vol.REMOVE_EXTRA)
+CITY_SCHEMA = vol.Schema(
+    {vol.Required(ATTR_PLACES): [PLACE_SCHEMA]}, extra=vol.REMOVE_EXTRA
+)
 
-COUNTRY_SCHEMA = vol.Schema({
-    vol.Required(ATTR_CITIES): [CITY_SCHEMA],
-}, extra=vol.REMOVE_EXTRA)
+COUNTRY_SCHEMA = vol.Schema(
+    {vol.Required(ATTR_CITIES): [CITY_SCHEMA]}, extra=vol.REMOVE_EXTRA
+)
 
-MAPS_RESPONSE_SCHEMA = vol.Schema({
-    vol.Required(ATTR_COUNTRIES): [COUNTRY_SCHEMA]
-})
+MAPS_RESPONSE_SCHEMA = vol.Schema({vol.Required(ATTR_COUNTRIES): [COUNTRY_SCHEMA]})
 
 
 class NextbikeRequestError(Exception):
     """Error to indicate a Nextbike API request has failed."""
+
     pass
 
 
@@ -108,16 +122,13 @@ async def async_nextbike_request(hass, uri, schema):
     except (asyncio.TimeoutError, aiohttp.ClientError) as ex:
         _LOGGER.error("Could not connect to Nextbike API endpoint: %s", ex)
     except ValueError as ex:
-        _LOGGER.error("Received non-JSON data from Nextbike API endpoint: %s",
-                      ex)
+        _LOGGER.error("Received non-JSON data from Nextbike API endpoint: %s", ex)
     except vol.Invalid as ex:
-        _LOGGER.error(
-            "Received unexpected JSON from Nextbike API endpoint: %s", ex)
+        _LOGGER.error("Received unexpected JSON from Nextbike API endpoint: %s", ex)
     raise NextbikeRequestError
 
 
-async def async_setup_platform(hass, config, async_add_entities,
-                               discovery_info=None):
+async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     """Set up the Nextbike platform."""
     if PLATFORM not in hass.data:
         hass.data[PLATFORM] = {}
@@ -141,7 +152,8 @@ async def async_setup_platform(hass, config, async_add_entities,
     await city.ready.wait()
 
     async_add_entities(
-        [NextbikeSensor(hass, city, radius, latitude, longitude, name)], True)
+        [NextbikeSensor(hass, city, radius, latitude, longitude, name)], True
+    )
 
 
 class NextbikeCity:
@@ -157,7 +169,9 @@ class NextbikeCity:
     async def async_refresh(self, now=None):
         """Refresh the state of the network."""
         try:
-            city = await async_nextbike_request(self.hass, MAPS_URI.format(city=self.city_id), MAPS_RESPONSE_SCHEMA)
+            city = await async_nextbike_request(
+                self.hass, MAPS_URI.format(city=self.city_id), MAPS_RESPONSE_SCHEMA
+            )
             self.places = city[ATTR_COUNTRIES][0][ATTR_CITIES][0][ATTR_PLACES]
             self.ready.set()
         except NextbikeRequestError:
@@ -198,16 +212,21 @@ class NextbikeSensor(Entity):
             closest_bike = {}
 
             for place in self._city.places:
-                distance = location.distance(self._latitude, self._longitude,
-                                             place[PLACE_SCHEMA_LATITUDE],
-                                             place[PLACE_SCHEMA_LONGITUDE])
+                distance = location.distance(
+                    self._latitude,
+                    self._longitude,
+                    place[PLACE_SCHEMA_LATITUDE],
+                    place[PLACE_SCHEMA_LONGITUDE],
+                )
                 if distance < self._radius:
                     available_bikes += place[PLACE_SCHEMA_BIKES]
 
                 if place[PLACE_SCHEMA_BIKES] > 0 and distance < closest_distance:
                     closest_bike[ATTR_LATITUDE] = place[PLACE_SCHEMA_LATITUDE]
                     closest_bike[ATTR_LONGITUDE] = place[PLACE_SCHEMA_LONGITUDE]
-                    closest_bike[ATTR_BIKES] = ','.join(map(str, place[PLACE_SCHEMA_BIKE_NUMBERS]))
+                    closest_bike[ATTR_BIKES] = ",".join(
+                        map(str, place[PLACE_SCHEMA_BIKE_NUMBERS])
+                    )
                     closest_bike[ATTR_DISTANCE] = distance
                     closest_distance = distance
 
@@ -230,9 +249,9 @@ class NextbikeSensor(Entity):
     @property
     def unit_of_measurement(self):
         """Return the unit of measurement."""
-        return 'bikes'
+        return "bikes"
 
     @property
     def icon(self):
         """Return the icon."""
-        return 'mdi:bike'
+        return "mdi:bike"
