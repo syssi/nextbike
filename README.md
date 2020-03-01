@@ -2,6 +2,12 @@
 
 The nextbike sensor platform monitors bike availability in a chosen radius of the free-floating areas. If you want to monitor a specific station please use the official citybikes sensor platform.
 
+
+## Install
+
+You can install this custom component by adding this repository ([https://github.com/syssi/nextbike](https://github.com/syssi/nextbike/)) to [HACS](https://hacs.xyz/) in the settings menu of HACS first. You will find the custom component in the integration menu afterwards, look for 'Nextbike Integration'. Alternatively, you can install it manually by copying the custom_component folder to your Home Assistant configuration folder.
+
+
 ## Setup
 
 ```
