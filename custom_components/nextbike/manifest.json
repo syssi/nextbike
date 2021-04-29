@@ -2,6 +2,7 @@
   "domain": "nextbike",
   "name": "Nextbike integration for Home Assistant",
   "version": "1.0.1",
+  "iot_class": "local_polling",
   "config_flow": false,
   "documentation": "https://github.com/syssi/nextbike",
   "issue_tracker": "https://github.com/syssi/nextbike/issues",
