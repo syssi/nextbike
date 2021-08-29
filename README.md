@@ -1,5 +1,11 @@
 # Nextbike Sensor
 
+![GitHub actions](https://github.com/syssi/nextbike/actions/workflows/ci.yaml/badge.svg)
+![GitHub stars](https://img.shields.io/github/stars/syssi/nextbike)
+![GitHub forks](https://img.shields.io/github/forks/syssi/nextbike)
+![GitHub watchers](https://img.shields.io/github/watchers/syssi/nextbike)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
+
 The nextbike sensor platform monitors bike availability in a chosen radius of the free-floating areas. If you want to monitor a specific station please use the official citybikes sensor platform.
 
 
