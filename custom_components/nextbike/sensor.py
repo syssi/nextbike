@@ -234,8 +234,8 @@ class NextbikeSensor(Entity):
             self._closest_bike = closest_bike
 
     @property
-    def device_state_attributes(self):
-        """Return the state attributes."""
+    def extra_state_attributes(self):
+        """Return the extra state attributes."""
         if self._state and self._closest_bike:
             return {
                 # The sixth decimal place is a precision of 0.11 m
