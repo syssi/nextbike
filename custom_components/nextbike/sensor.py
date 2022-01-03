@@ -114,7 +114,7 @@ async def async_nextbike_request(hass, uri, schema):
     try:
         session = async_get_clientsession(hass)
 
-        with async_timeout.timeout(REQUEST_TIMEOUT, loop=hass.loop):
+        with async_timeout.timeout(REQUEST_TIMEOUT):
             req = await session.get(DEFAULT_ENDPOINT.format(uri=uri))
 
         json_response = await req.json()
@@ -234,8 +234,8 @@ class NextbikeSensor(Entity):
             self._closest_bike = closest_bike
 
     @property
-    def device_state_attributes(self):
-        """Return the state attributes."""
+    def extra_state_attributes(self):
+        """Return the extra state attributes."""
         if self._state and self._closest_bike:
             return {
                 # The sixth decimal place is a precision of 0.11 m

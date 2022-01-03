@@ -1,5 +1,11 @@
 # Nextbike Sensor
 
+![GitHub actions](https://github.com/syssi/nextbike/actions/workflows/ci.yaml/badge.svg)
+![GitHub stars](https://img.shields.io/github/stars/syssi/nextbike)
+![GitHub forks](https://img.shields.io/github/forks/syssi/nextbike)
+![GitHub watchers](https://img.shields.io/github/watchers/syssi/nextbike)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
+
 The nextbike sensor platform monitors bike availability in a chosen radius of the free-floating areas. If you want to monitor a specific station please use the official citybikes sensor platform.
 
 
@@ -45,7 +51,7 @@ City IDs:
 
 * Austria
   * nextbike Austria
-    * **417** Salzburg  (47.8014, 13.0458)
+    * **417** Salzburg (47.8014, 13.0458)
   * nextbike Niederösterreich Austria
     * **57** St.Pölten (48.2058, 15.6232)
     * **64** Mödling (48.1047, 16.3202)
@@ -53,10 +59,17 @@ City IDs:
     * **143** Tulln (48.3269, 16.0569)
     * **144** Triestingtal (47.9421, 16.1149)
     * **146** Thermenregion (47.9892, 16.2646)
+    * **149** Römerland (48.0909, 16.853)
     * **156** WienerNeustadt (47.8167, 16.2426)
+    * **165** Unteres Traisental (48.1111, 15.8176)
     * **170** Marchfeld (48.2407, 16.9093)
     * **174** Zehn vor Wien (48.3403, 16.279)
+    * **184** Laa an der Thaya (48.7196, 16.3878)
+    * **185** Südheide (48.1077, 16.3937)
+    * **212** Hollabrunn (48.562, 16.0785)
+    * **213** WienerWald (48.1926, 16.141)
     * **395** Groß Enzersdorf (48.1986, 16.5496)
+    * **414** Amstetten (48.1218, 14.8774)
   * Stadtrad Innsbruck Austria
     * **199** Innsbruck (47.2632, 11.3961)
   * nextbike Tirol Austria
@@ -65,6 +78,8 @@ City IDs:
     * **396** Klagenfurt (46.6335, 14.3085)
   * nextbike Burgenland Austria
     * **23** Neusiedler See (47.839, 16.761)
+  * city bike Linz
+    * **692** Linz (48.3003, 14.2843)
 * Bosnia and Herzegovina
   * Sarajevo Bosnia and Herzegovina
     * **350** Sarajevo (43.85, 18.39)
@@ -75,6 +90,7 @@ City IDs:
 * Croatia
   * nextbike Croatia
     * **220** Zagreb (45.7984, 15.9789)
+    * **739** Vinkovci (45.289, 18.8057)
   * Grad Šibenik (Croatia)
     * **248** Šibenik (43.7294, 15.9074)
   * Grad Karlovac (Croatia)
@@ -85,6 +101,8 @@ City IDs:
     * **291** Gospić (44.5469, 15.375)
   * Grad Makarska (Croatia)
     * **324** Makarska (43.2992, 17.0184)
+  * Grad Vukovar (Croatia)
+    * **328** Vukovar (45.3575, 18.9895)
   * Općina Brinje (Croatia)
     * **325** Brinje (44.9977, 15.1258)
   * Grad Zadar (Croatia)
@@ -95,6 +113,10 @@ City IDs:
     * **416** Sisak (45.4857, 16.3778)
   * Grad Velika Gorica (Croatia)
     * **415** Velika Gorica (45.7161, 16.0683)
+  * Grad Zaprešić (Croatia)
+    * **723** Zaprešić (45.8622, 15.8049)
+  * Porec bike share (Croatia)
+    * **429** Poreč (45.2292, 13.6035)
   * Grad Metković (Croatia)
     * **424** Metković (43.0654, 17.642)
   * Jastrebarsko (Croatia)
@@ -102,16 +124,25 @@ City IDs:
   * Grad Drniš (Croatia)
     * **426** Drniš (43.8425, 16.1197)
   * Općina Dugopolje (Croatia)
-    * **445** Dugopolje (43.5943, 16.5986)
+    * **445** Dugopolje (43.5872, 16.5879)
   * Općina Pitomača (Croatia)
     * **574** Pitomača (45.9077, 17.2622)
   * Grad Split (Croatia)
-    * **617** Split (43.5162, 16.4637)
+    * **617** Split  (43.5162, 16.4637)
+    * **740** Solin (43.5441, 16.4833)
+    * **741** Općina Klis (43.5605, 16.5269)
+    * **742** Općina Hrvace (43.7553, 16.6197)
+    * **743** Općina Otok Dalmatinski (43.6889, 16.7361)
+    * **744** Sinj (43.7031, 16.6364)
+    * **745** Hvar (43.2172, 16.7734)
+  * eMobi (Croatia)
+    * **734** Osijek (45.554, 18.6943)
 * Cyprus
   * nextbike Cyprus
     * **190** Limassol (34.6823, 33.0464)
     * **206** Nicosia (35.1991, 33.4535)
     * **696** Larnaca (34.9187, 33.6331)
+    * **730** Preveza (38.9551, 20.7547)
 * Czech Republic
   * nextbike Prostejov
     * **549** Prostejov (49.4722, 17.1055)
@@ -125,21 +156,34 @@ City IDs:
     * **660** Brno (49.1911, 16.6148)
   * nextbike Praha
     * **661** Praha (50.0827, 14.4244)
+    * **736** Říčany (49.9976, 14.6685)
   * nextbike Olomouc
     * **663** Olomouc (49.5929, 17.2459)
   * nextbike Kladno
     * **659** Kladno (50.1435, 14.1082)
+    * **715** Kladno - zkouška (50.1435, 14.1082)
   * nextbike Opava
     * **662** Opava (49.9393, 17.8955)
   * nextbike Pardubice
     * **680** Pardubice (50.0343, 15.7812)
   * nextbike Hradec Králové
     * **682** Hradec Králové (50.2079, 15.8334)
-  * nextbike Mladá Boleslav
+  * nextbike Mladoboleslavsko
     * **681** Mladá Boleslav (50.4278, 14.8999)
-* Finland
-  * Oulu Poland
-    * **595** Oulu (65.0049, 25.4539)
+    * **704** Mnichovo Hradiště (50.5218, 14.9741)
+    * **718** Bakov nad Jizerou (50.477, 14.9392)
+  * nextbike Frýdek-Místek
+    * **700** Frýdek-Místek (49.6832, 18.3457)
+  * nextbike Uherské Hradiště
+    * **702** Uherské Hradiště (49.0678, 17.4665)
+  * nextbike Zlín
+    * **703** Zlín (49.238, 17.6788)
+  * nextbike Krnov
+    * **707** Krnov (50.09, 17.7027)
+  * nextbike Rychnovsko
+    * **708** Rychnovsko (50.1668, 16.2828)
+  * nextbike Písek
+    * **709** Písek (49.3051, 14.1463)
 * Germany
   * UsedomRad Germany
     * **176** Usedom (53.9779, 13.9925)
@@ -147,7 +191,7 @@ City IDs:
     * **129** Dortmund (51.5141, 7.46255)
     * **131** Bottrop (51.5263, 6.94611)
     * **132** Duisburg (51.4487, 6.77513)
-    * **133** Essen (51.4425, 7.02301)
+    * **133** Essen (51.4387, 7.14094)
     * **134** Gelsenkirchen (51.5404, 7.07039)
     * **135** Hamm (51.6775, 7.84836)
     * **136** Herne (51.5363, 7.21493)
@@ -155,11 +199,13 @@ City IDs:
     * **138** Oberhausen (51.4936, 6.85169)
   * KVV.nextbike
     * **21** Karlsruhe (49.0102, 8.41827)
-    * **621** Baden-Baden (48.7653, 8.23985)
+    * **621** Baden-Baden (48.7365, 8.30482)
     * **627** Bruchsal (49.126, 8.5968)
     * **633** Rheinstetten (48.962, 8.29575)
     * **634** Ettlingen (48.9429, 8.39784)
     * **635** Rastatt (48.86, 8.20386)
+    * **677** Gondelsheim (49.0598, 8.65898)
+    * **722** Gaggenau (48.8039, 8.3233)
   * VRNnextbike
     * **194** Heidelberg (49.4023, 8.67577)
     * **195** Mannheim (49.4869, 8.45638)
@@ -184,13 +230,13 @@ City IDs:
   * KVB Rad Germany
     * **14** Köln (50.9429, 6.95649)
   * SWA Rad
-    * **178** Augsburg (48.3676, 10.8646)
+    * **178** Augsburg (48.3722, 10.8929)
   * nextbike Berlin
     * **362** Berlin (52.5087, 13.3563)
   * nextbike Frankfurt
     * **8** Frankfurt (50.1219, 8.6689)
   * nextbike Kassel
-    * **462** Kassel (51.3127, 9.47975)
+    * **462** Kassel (51.3169, 9.49219)
   * nextbike Düsseldorf
     * **50** Düsseldorf (51.2243, 6.77204)
   * nextbike Erfurt
@@ -205,7 +251,7 @@ City IDs:
     * **379** Bremen (53.0781, 8.80132)
   * Berlin-Buch Campus
     * **508** Berlin-Buch (52.6364, 13.5029)
-  * Santander nextbike Mönchengladbach
+  * NEW MöBus nextbike
     * **530** Mönchengladbach (51.1817, 6.43578)
   * Bonn nextbike
     * **547** Bonn (50.7367, 7.09541)
@@ -214,28 +260,30 @@ City IDs:
   * SAP Walldorf
     * **592** Walldorf (49.2945, 8.62324)
   * RVK
-    * **648** RVK-Gesamt (50.7069, 6.87607)
+    * **648** RVK e-Bike (50.7069, 6.87607)
   * Frelo Freiburg
     * **619** Freiburg (47.9958, 7.84453)
   * wupsiRad Leverkusen
-    * **607** Leverkusen (51.0699, 6.97632)
+    * **607** Leverkusen (51.0732, 7.00814)
   * VAG_Rad
     * **626** Nürnberg (49.4487, 11.0794)
   * Sprottenflotte
-    * **613** KielRegion (54.3242, 10.1515)
-  * nextbike Hannover
+    * **613** KielRegion (54.3133, 10.1212)
+    * **710** Rendsburg (54.3041, 9.66557)
+    * **711** Eckernförde (54.4686, 9.83704)
+    * **712** Preetz (54.2328, 10.2798)
+    * **713** Plön (54.1619, 10.4263)
+  * sprintRAD
     * **87** Hannover (52.3721, 9.73569)
   * Graben - ready4green
-    * **647** Graben (48.1893, 10.8254)
+    * **647** Graben (51.1242, 10.8984)
   * nextbike Norderstedt
     * **177** Norderstedt (53.6969, 10.002)
-  * Airbus
-    * **654** Hamburg Finkenwerder (53.5383, 9.83019)
   * Nibelungen-Bike
     * **657** Braunschweig (52.2598, 10.5318)
   * Potsdam Rad
     * **158** Potsdam (52.3997, 13.0676)
-  * flowBie Siggi
+  * meinSiggi
     * **16** Bielefeld (52.0257, 8.53286)
   * Bergisches e-Bike
     * **676** Bergisches e-Bike (51.0192, 7.18025)
@@ -246,7 +294,7 @@ City IDs:
   * nextbike Quickborn
     * **256** Quickborn (53.7333, 9.90272)
   * nextbike Wiesbaden
-    * **7** Wiesbaden (50.0709, 8.24322)
+    * **7** Wiesbaden (50.0739, 8.24181)
   * nextbike Offenburg
     * **155** Offenburg (48.4721, 7.94243)
   * nextbike Rüsselsheim am Main
@@ -261,19 +309,16 @@ City IDs:
     * **689** Bad Oeynhausen (52.2051, 8.80074)
   * RSVG-Bike
     * **691** RSVG (50.7669, 7.37457)
+  * Eifel e-Bike
+    * **706** Eifel e-Bike (50.5771, 6.64673)
 * India
   * Chartered Bike (Bhopal - India)
     * **376** Bhopal (23.2467, 77.411)
-  * Smartbike (Vijayawada - India)
-    * **402** Vijayawada (16.5109, 80.6313)
-  * Smartbike (Hyderabad - India)
-    * **367** Hyderabad (17.38, 78.4725)
-  * Smartbike (New Delhi - India)
-    * **511** Delhi (28.6228, 77.2084)
   * Chartered Bike (Ranchi - India)
     * **609** Ranchi (23.341, 85.3075)
-  * Smartbike (Chennai - India)
-    * **594** Chennai (13.09, 80.27)
+* Italy
+  * nextbike Bergamo
+    * **728** Bergamo (45.6986, 9.67567)
 * Latvia
   * nextbike LV
     * **128** Rīga (56.9453, 24.1033)
@@ -286,7 +331,8 @@ City IDs:
     * **302** Malta (35.9192, 14.4889)
 * Mexico
   * YOY - San Luis Potosi
-    * **664** San Luis Potosi (22.1577, -100.979)
+    * **664** San Luis Potosi (22.438, -100.514)
+    * **695** Cancún (21.1675, -86.8498)
 * Netherlands
   * nextbike Dordrecht
     * **447** Dordrecht (51.7833, 4.69391)
@@ -296,69 +342,25 @@ City IDs:
     * **361** Auckland Central (-36.8493, 174.765)
 * Poland
   * WRM nextbike Poland
-    * **148** Wrocław (51.1115, 17.0257)
-    * **618** Wrocław-Wawa (52.2265, 21.0127)
-  * PRM Poznan Poland
-    * **192** Poznań (52.3669, 17.1599)
-    * **394** Stacje Sponsorskie Nextbike PRM (52.4077, 16.9323)
-    * **615** Poznań - TEST  (52.232, 20.9956)
+    * **148** Wrocław (51.136, 17.0891)
   * VETURILO Poland
-    * **210** Warszawa (52.2305, 21.0017)
-    * **372** Stacje Sponsorskie Nextbike Veturilo (52.2299, 20.9942)
-    * **475** Orlen Warszawa (52.2317, 21.0052)
+    * **690** Warszawa-testy (52.2362, 21.0107)
   * BIKER Białystok Poland
-    * **245** Białystok (53.1262, 23.1427)
+    * **470** Orlen Białystok (53.1342, 23.1485)
     * **686** Białystok-wawa (52.2811, 21.0148)
-  * KRM Konstanciński Poland
-    * **247** Konstancin Jeziorna (52.0759, 21.1161)
-  * GRM Grodzisk Poland
-    * **255** Grodzisk Mazowiecki (52.113, 20.6265)
+  * LRM Lublin Poland
+    * **251** Lublin (51.2469, 22.5697)
+    * **331** Świdnik (51.2194, 22.6988)
+    * **471** Orlen Lublin (51.2469, 22.5697)
+    * **729** Stacje Sponsorskie Nextbike LRM (51.2469, 22.5697)
   * Katowice Bike Poland
     * **342** Katowice (50.2594, 19.0215)
   * Bike_S SRM Poland
     * **346** Szczecin (53.4301, 14.5498)
-  * System Legnicki Rower Miejski (SLRM) Poland
-    * **363** Legnica (51.2059, 16.1667)
-  * Tyski Rower Miejski Poland
-    * **413** Tychy (50.1124, 18.9972)
-  * Kołobrzeski Rower Miejski Poland
-    * **422** Kołobrzeg (54.1762, 15.5761)
-  * Kaliski Rower Miejski Poland
-    * **431** Kalisz (51.7525, 18.0341)
-  * Rower Miejski w Ostrowie Wielkopolskim Poland
-    * **452** Ostrów Wielkopolski (51.65, 17.8253)
-  * Piaseczyński Rower Miejski Poland
-    * **461** Piaseczno (52.0733, 21.0269)
-  * Koszaliński Rower Miejski Poland
-    * **496** Koszalin (54.2026, 16.1678)
-  * Sosnowiecki Rower Miejski Poland
-    * **497** Sosnowiec (50.278, 19.1345)
   * Pobiedziski Rower Gminny Poland
     * **504** Pobiedziska (52.4765, 17.2866)
-  * Siemianowicki Rower Miejski Poland
-    * **519** Siemianowice Śląskie (50.3031, 19.0222)
-  * Piotrkowski Rower Miejski Poland
-    * **518** Piotrków Trybunalski (51.3975, 19.6779)
-  * Płocki Rower Miejski (PRM) Poland
-    * **521** Płock (52.5445, 19.7017)
-    * **639** Orlen Płock (52.5466, 19.7047)
-  * Tychowski Rower Miejski Poland
-    * **528** Tychowo (53.9395, 16.2306)
-    * **534** Tychowo - Atrakcje turystyczne  (53.9294, 16.2467)
   * Ciechanowski Rower Miejski Poland
     * **523** Ciechanów (52.8763, 20.6102)
-  * Koniński Rower Miejski Poland
-    * **545** Konin (52.2284, 18.2553)
-  * Zielonogórski Rower Miejski Poland
-    * **529** Zielona Góra (51.9381, 15.5048)
-  * Tarnowski Rower Miejski Poland
-    * **548** Tarnów (50.0113, 20.9728)
-  * Kajteroz - Chorzowski Rower Miejski Poland
-    * **557** Chorzów (50.2925, 18.9635)
-  * Koło Marek Poland
-    * **550** Marki (52.3256, 21.1089)
-  * Żyrardowski Rower Miejski Poland
-    * **551** Żyrardów (52.0503, 20.4464)
   * Rowerowe Łódzkie Poland (RL)
     * **562** Koluszki (RL) (51.7401, 19.835)
     * **563** Łask (RL) (51.5893, 19.142)
@@ -372,17 +374,16 @@ City IDs:
     * **571** Łódź (RL) (51.7674, 19.4575)
   * System Roweru Gminnego Poland
     * **593** Pielgrzymka (51.1185, 15.8153)
-  * Luboński Rower Miejski Poland
-    * **620** Luboń (52.3461, 16.8765)
-  * Komornicki System Rowerowy Poland
-    * **630** Komorniki (52.3347, 16.8094)
   * Oleski Rower Miejski Poland
     * **650** Olesno (50.8773, 18.4212)
+  * Jurajski Rower (Poland)
 * Romania
   * nextbike Romania
     * **510** Focșani (45.6947, 27.1851)
   * Drobeta Velopark
     * **693** Drobeta (44.6326, 22.6564)
+  * Saturn
+    * **697** Saturn (43.8293, 28.5886)
 * Saudi Arabia
   * iBike ( Saudi Arabia )
     * **264** King Abdullah Economic City (22.4053, 39.0815)
@@ -392,14 +393,21 @@ City IDs:
   * BikeKIA
     * **538** Žilina (49.2205, 18.7413)
 * Slovenia
-  * NomagoBikes (Slovenia)
+  * Nomago Bikes - KOLESCE
     * **531** Celje (46.252, 15.296)
     * **535** Laško (46.1458, 15.2312)
     * **555** Žalec (46.2529, 15.1635)
+    * **556** Polzela (46.2767, 15.0753)
     * **643** Zreče (46.3751, 15.387)
     * **644** Slovenske Konjice (46.3382, 15.4244)
     * **645** Štore (46.2192, 15.3172)
     * **683** Šentjur (46.2146, 15.394)
+    * **717** Ljubljana (46.0577, 14.5013)
+    * **726** Marina Portorož (45.5054, 13.5979)
+  * Nomago Bikes - GO2GO
+    * **688** Nova Gorica (45.9576, 13.6406)
+  * Nomago Bikes - ZANAPREJ
+    * **725** Zagorje ob Savi (46.1392, 14.9785)
 * Spain
   * Sitycleta (Las Palmas)
     * **408** Las Palmas de Gran Canaria (28.1236, -15.4366)
@@ -416,7 +424,7 @@ City IDs:
     * **658** Göteborg (57.7038, 11.9648)
 * Switzerland
   * nextbike Switzerland
-    * **88** Sursee (47.1713, 8.10877)
+    * **88** Sursee Plus (47.1713, 8.10877)
     * **126** Luzern (47.0472, 8.30446)
     * **323** Hergiswil (46.9905, 8.30829)
     * **383** Stans (46.9593, 8.36836)
@@ -427,20 +435,23 @@ City IDs:
     * **465** Oberdorf (46.9563, 8.38867)
     * **483** Ennetmoos (46.9573, 8.3377)
     * **489** Meggen (47.0453, 8.3769)
-    * **490** Küssnacht SZ (47.0856, 8.44145)
+    * **491** Kriens (47.0346, 8.27751)
     * **492** Hochdorf / Seetal (47.1667, 8.29159)
     * **624** Ebikon (47.0812, 8.33973)
+    * **632** Root (47.1149, 8.39008)
     * **636** Stadt Zug (47.1663, 8.51587)
+    * **716** Nottwil (47.1357, 8.1357)
 * Ukraine
   * nextbike (Ukraine)
     * **280** Lviv (49.8344, 24.0353)
     * **522** Kharkiv (49.9896, 36.2411)
     * **525** Ivano Frankivsk (48.9281, 24.7103)
     * **572** Odesa (46.4672, 30.7164)
+    * **573** Dnipro (48.4718, 35.0491)
   * nextbike Vinnitsa (Ukraine)
     * **546** Vinnytsia (49.2324, 28.4659)
 * United Kingdom
-  * nextbike UK
+  * nextbike Stirling
     * **243** Stirling (56.1195, -3.93495)
   * BelfastBikes
     * **238** Belfast (54.5969, -5.92918)
@@ -448,9 +459,10 @@ City IDs:
     * **320** Milton Keynes (52.0406, -0.759417)
   * Co-bikes
     * **354** Exeter (50.7272, -3.53605)
-  * nextbike Glasgow
+    * **720** Falmouth (50.1551, -5.07198)
+  * OVO Bikes Glasgow
     * **237** Glasgow (55.8589, -4.25549)
-  * nextbike Cardiff
+  * OVO Bikes Cardiff & Vale of Glamorgan
     * **476** Cardiff (51.481, -3.18003)
     * **679** Penarth (51.4365, -3.19113)
   * Santander Cycles - Brunel
@@ -458,12 +470,9 @@ City IDs:
   * University of Surrey
     * **485** University of Surrey (51.2422, -0.590594)
   * Santander Cycles - Swansea
-    * **486** Swansea University (51.6106, -3.9764)
-  * nextbike Warwick
-    * **272** University of Warwick (52.3815, -1.56159)
+    * **486** Swansea University (51.606, -3.9243)
 * United States
   * Healthy Ride Pittsburgh
     * **254** Pittsburgh (40.4349, -79.9794)
 
 Extracted from https://maps.nextbike.net/maps/nextbike-official.json?list_cities=1
-
