@@ -114,7 +114,7 @@ async def async_nextbike_request(hass, uri, schema):
     try:
         session = async_get_clientsession(hass)
 
-        with async_timeout.timeout(REQUEST_TIMEOUT, loop=hass.loop):
+        with async_timeout.timeout(REQUEST_TIMEOUT):
             req = await session.get(DEFAULT_ENDPOINT.format(uri=uri))
 
         json_response = await req.json()
