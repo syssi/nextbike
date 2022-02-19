@@ -52,7 +52,7 @@ ATTR_CLOSEST_DISTANCE = "closest_distance"
 
 CONF_CITY_ID = "city_id"
 
-DEFAULT_ENDPOINT = "https://api.nextbike.net/{uri}"
+DEFAULT_ENDPOINT = "https://maps.nextbike.net/{uri}"
 MAPS_URI = "maps/nextbike-live.json?&city={city}"
 
 REQUEST_TIMEOUT = 5  # In seconds; argument to asyncio.timeout
