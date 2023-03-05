@@ -5,13 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://github.com/syssi/nextbike
 """
 import asyncio
-from datetime import timedelta
 import logging
+from datetime import timedelta
 
 import aiohttp
 import async_timeout
+import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
-
 from homeassistant.components.sensor import ENTITY_ID_FORMAT, PLATFORM_SCHEMA
 from homeassistant.const import (
     ATTR_ATTRIBUTION,
@@ -24,15 +24,15 @@ from homeassistant.const import (
     CONF_LONGITUDE,
     CONF_NAME,
     CONF_RADIUS,
-    LENGTH_FEET,
-    LENGTH_METERS,
+    UnitOfLength,
 )
 from homeassistant.exceptions import PlatformNotReady
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity, async_generate_entity_id
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.util import distance, location
+from homeassistant.util.unit_conversion import DistanceConverter
+from homeassistant.util.unit_system import METRIC_SYSTEM
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -52,7 +52,7 @@ ATTR_CLOSEST_DISTANCE = "closest_distance"
 
 CONF_CITY_ID = "city_id"
 
-DEFAULT_ENDPOINT = "https://api.nextbike.net/{uri}"
+DEFAULT_ENDPOINT = "https://maps.nextbike.net/{uri}"
 MAPS_URI = "maps/nextbike-live.json?&city={city}"
 
 REQUEST_TIMEOUT = 5  # In seconds; argument to asyncio.timeout
@@ -138,8 +138,10 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     longitude = config.get(CONF_LONGITUDE, hass.config.longitude)
     radius = config.get(CONF_RADIUS)
     name = config.get(CONF_NAME)
-    if not hass.config.units.is_metric:
-        radius = distance.convert(radius, LENGTH_FEET, LENGTH_METERS)
+    if hass.config.units is METRIC_SYSTEM:
+        radius = DistanceConverter.convert(
+            radius, UnitOfLength.FEET, UnitOfLength.METERS
+        )
 
     if city_id not in hass.data[PLATFORM]:
         city = NextbikeCity(hass, city_id)
