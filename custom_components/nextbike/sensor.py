@@ -30,7 +30,7 @@ from homeassistant.exceptions import PlatformNotReady
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.entity import Entity, async_generate_entity_id
 from homeassistant.helpers.event import async_track_time_interval
-from homeassistant.util import distance, location
+from homeassistant.util import location
 from homeassistant.util.unit_conversion import DistanceConverter
 from homeassistant.util.unit_system import METRIC_SYSTEM
 
