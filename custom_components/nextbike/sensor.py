@@ -138,7 +138,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     longitude = config.get(CONF_LONGITUDE, hass.config.longitude)
     radius = config.get(CONF_RADIUS)
     name = config.get(CONF_NAME)
-    if hass.config.units is METRIC_SYSTEM:
+    if hass.config.units is not METRIC_SYSTEM:
         radius = DistanceConverter.convert(
             radius, UnitOfLength.FEET, UnitOfLength.METERS
         )
