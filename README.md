@@ -448,11 +448,9 @@ City IDs:
   * KRM Konstanciński Poland
   * GRM Grodzisk Poland
     * **255** Grodzisk Mazowiecki (52.113, 20.6265)
-  * Katowice Bike Poland
   * Stalowa Wola miasto rowerów Poland
   * Zgierski Rower Miejski Poland
   * System Rowerów Miejskich w Pszczynie Poland
-  * Tyski Rower Miejski Poland
   * Częstochowski Rower Miejski Poland
   * Pruszkowski Rower Miejski Poland
   * Siedlecki Rower Miejski Poland
@@ -460,6 +458,38 @@ City IDs:
   * Kołobrzeski Rower Miejski Poland
     * **422** Kołobrzeg (54.1764, 15.5759)
   * Kaliski Rower Miejski Poland
+  * Metrorower GZM
+    * **958** Tychy (50.1124, 18.9972)
+    * **959** Siemianowice Śląskie (50.3031, 19.0222)
+    * **960** Czeladź
+    * **961** Gliwice
+    * **962** Katowice
+    * **963** Sosnowiec
+    * **964** Zabrze
+    * **965** Chorzów
+    * **1061** Bytom
+    * **1062** Ruda Śląska
+    * **1063** Dąbrowa Górnicza
+    * **1064** Mysłowice
+    * **1065** Piekary Śląskie
+    * **1066** Świętochłowice
+    * **1067** Bieruń
+    * **1069** Gierałtowice
+    * **1070** Knurów
+    * **1071** Łaziska Górne
+    * **1072** Mikołów
+    * **1073** Pyskowice
+    * **1074** Radzionków
+    * **1075** Siewierz
+    * **1076** Sławków
+    * **1077** Świerklaniec
+    * **1078** Tarnowskie Góry
+    * **1079** Wojkowice
+    * **1080** Wyry
+    * **1081** Zbrosławice
+    * **1082** Będzin
+    * **1088** Rudziniec
+    * **1089** Chełm Śląski
   * Rower Miejski Szamotuły Poland (RMS) Poland
     * **446** Szamotuły (52.6112, 16.5819)
   * Rower Miejski w Ostrowie Wielkopolskim Poland
@@ -467,11 +497,9 @@ City IDs:
     * **461** Piaseczno (52.0733, 21.0269)
   * Koszaliński Rower Miejski Poland
     * **496** Koszalin (54.2026, 16.1678)
-  * Sosnowiecki Rower Miejski Poland
   * Pobiedziski Rower Gminny Poland
   * JasKółka
     * **509** Jastrzębie-Zdrój (49.9521, 18.6007)
-  * Siemianowicki Rower Miejski Poland
   * Piotrkowski Rower Miejski Poland
   * Płocki Rower Miejski (PRM) Poland
   * Tychowski Rower Miejski Poland
@@ -482,7 +510,6 @@ City IDs:
   * Zielonogórski Rower Miejski Poland
     * **529** Zielona Góra (51.9521, 15.6003)
   * Tarnowski Rower Miejski Poland
-  * Kajteroz - Chorzowski Rower Miejski Poland
   * Koło Marek Poland
     * **550** Marki (52.3256, 21.1089)
   * Żyrardowski Rower Miejski Poland
