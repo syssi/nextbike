@@ -4,6 +4,7 @@ Sensor for the Nextbike data.
 For more details about this platform, please refer to the documentation at
 https://github.com/syssi/nextbike
 """
+
 import asyncio
 import logging
 from datetime import timedelta
@@ -138,7 +139,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     longitude = config.get(CONF_LONGITUDE, hass.config.longitude)
     radius = config.get(CONF_RADIUS)
     name = config.get(CONF_NAME)
-    if hass.config.units is METRIC_SYSTEM:
+    if hass.config.units is not METRIC_SYSTEM:
         radius = DistanceConverter.convert(
             radius, UnitOfLength.FEET, UnitOfLength.METERS
         )
@@ -146,7 +147,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     if city_id not in hass.data[PLATFORM]:
         city = NextbikeCity(hass, city_id)
         hass.data[PLATFORM][city_id] = city
-        hass.async_add_job(city.async_refresh)
+        hass.async_add_executor_job(city.async_refresh)
         async_track_time_interval(hass, city.async_refresh, SCAN_INTERVAL)
     else:
         city = hass.data[PLATFORM][city_id]
