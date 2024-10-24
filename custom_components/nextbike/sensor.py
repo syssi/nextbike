@@ -4,6 +4,7 @@ Sensor for the Nextbike data.
 For more details about this platform, please refer to the documentation at
 https://github.com/syssi/nextbike
 """
+
 import asyncio
 import logging
 from datetime import timedelta
