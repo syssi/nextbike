@@ -1,5 +1,4 @@
-"""
-Sensor for the Nextbike data.
+"""Sensor for the Nextbike data.
 
 For more details about this platform, please refer to the documentation at
 https://github.com/syssi/nextbike
@@ -13,14 +12,10 @@ import aiohttp
 import async_timeout
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
-from homeassistant.components.sensor import ENTITY_ID_FORMAT, PLATFORM_SCHEMA
+from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    ATTR_ATTRIBUTION,
-    ATTR_ID,
     ATTR_LATITUDE,
-    ATTR_LOCATION,
     ATTR_LONGITUDE,
-    ATTR_NAME,
     CONF_LATITUDE,
     CONF_LONGITUDE,
     CONF_NAME,
@@ -29,7 +24,7 @@ from homeassistant.const import (
 )
 from homeassistant.exceptions import PlatformNotReady
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from homeassistant.helpers.entity import Entity, async_generate_entity_id
+from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.util import location
 from homeassistant.util.unit_conversion import DistanceConverter
@@ -177,11 +172,11 @@ class NextbikeCity:
             )
             self.places = city[ATTR_COUNTRIES][0][ATTR_CITIES][0][ATTR_PLACES]
             self.ready.set()
-        except NextbikeRequestError:
+        except NextbikeRequestError as err:
             if now is not None:
                 self.ready.clear()
             else:
-                raise PlatformNotReady
+                raise PlatformNotReady from err
 
 
 class NextbikeSensor(Entity):
