@@ -13,7 +13,7 @@ repos:
     hooks:
       - id: codespell
         args:
-          - --ignore-words-list=hass,alot,datas,dof,dur,eto,farenheit,hist,iff,ines,ist,lightsensor,mut,nd,pres,referer,ser,serie,te,technik,ue,uint,visability,wan,wanna,withing,hsa
+          - --ignore-words-list=hass,alot,datas,dof,dur,eto,farenheit,hist,iff,ines,ist,lightsensor,linz,mut,nd,pres,referer,ser,serie,te,technik,ue,uint,visability,wan,wanna,withing,hsa
           - --quiet-level=2
         exclude_types: [csv, json, ini]
   - repo: https://github.com/pre-commit/pre-commit-hooks

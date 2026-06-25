@@ -1,9 +1,7 @@
 {
   "domain": "nextbike",
   "name": "Nextbike integration for Home Assistant",
-  "codeowners": [
-    "@syssi"
-  ],
+  "codeowners": ["@syssi"],
   "config_flow": false,
   "dependencies": [],
   "documentation": "https://github.com/syssi/nextbike",
