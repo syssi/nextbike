@@ -1,0 +1,387 @@
+{
+  "countries": [
+    {
+      "name": "nextbike Berlin",
+      "cities": [
+        {
+          "uid": 362,
+          "name": "Berlin",
+          "places": [
+            {
+              "uid": 1994200,
+              "lat": 52.502813,
+              "lng": 13.48485,
+              "bike": false,
+              "name": "S Nöldnerplatz (Mobilitätsstation)",
+              "address": null,
+              "spot": true,
+              "number": 1890,
+              "booked_bikes": 0,
+              "bikes": 12,
+              "bikes_available_to_rent": 12,
+              "active_place": 1,
+              "bike_racks": 6,
+              "free_racks": 0,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": true,
+              "terminal_type": "free",
+              "bike_list": [
+                {
+                  "number": "18890",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551153556,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "18649",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551122963,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "18531",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 83300048386,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "17686",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551121015,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "16837",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551129140,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "14755",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551122880,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "15328",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551114262,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "19645",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551130440,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "100848",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551162385,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "100381",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551164651,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "10579",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551157222,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "13686",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551135724,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "18890",
+                "18649",
+                "18531",
+                "17686",
+                "16837",
+                "14755",
+                "15328",
+                "19645",
+                "100848",
+                "100381",
+                "10579",
+                "13686"
+              ],
+              "bike_types": {
+                "196": 6,
+                "431": 6
+              },
+              "place_type": "18",
+              "rack_locks": false,
+              "no_registration": true
+            },
+            {
+              "uid": 633079547,
+              "lat": 52.502484,
+              "lng": 13.486327,
+              "bike": true,
+              "name": "BIKE 10453",
+              "address": null,
+              "spot": false,
+              "number": 0,
+              "booked_bikes": 0,
+              "bikes": 1,
+              "bikes_available_to_rent": 1,
+              "active_place": 1,
+              "bike_racks": 0,
+              "free_racks": 0,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "",
+              "bike_list": [
+                {
+                  "number": "10453",
+                  "bike_type": 196,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551163484,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "10453"
+              ],
+              "bike_types": {
+                "196": 1
+              },
+              "place_type": "12",
+              "rack_locks": false
+            },
+            {
+              "uid": 633086821,
+              "lat": 52.50372,
+              "lng": 13.485439,
+              "bike": true,
+              "name": "BIKE 100178",
+              "address": null,
+              "spot": false,
+              "number": 0,
+              "booked_bikes": 0,
+              "bikes": 1,
+              "bikes_available_to_rent": 1,
+              "active_place": 1,
+              "bike_racks": 0,
+              "free_racks": 0,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "",
+              "bike_list": [
+                {
+                  "number": "100178",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551163573,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "100178"
+              ],
+              "bike_types": {
+                "431": 1
+              },
+              "place_type": "12",
+              "rack_locks": false
+            },
+            {
+              "uid": 633115138,
+              "lat": 52.388591,
+              "lng": 13.028048,
+              "bike": true,
+              "name": "BIKE 101799",
+              "address": null,
+              "spot": false,
+              "number": 0,
+              "booked_bikes": 0,
+              "bikes": 1,
+              "bikes_available_to_rent": 1,
+              "active_place": 1,
+              "bike_racks": 0,
+              "free_racks": 0,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "",
+              "bike_list": [
+                {
+                  "number": "101799",
+                  "bike_type": 346,
+                  "lock_types": [
+                    "frame_lock",
+                    "dls"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 869616064246575,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "101799"
+              ],
+              "bike_types": {
+                "346": 1
+              },
+              "place_type": "12",
+              "rack_locks": false
+            },
+            {
+              "uid": 633075676,
+              "lat": 52.378684,
+              "lng": 13.084499,
+              "bike": true,
+              "name": "BIKE 14878",
+              "address": null,
+              "spot": false,
+              "number": 0,
+              "booked_bikes": 0,
+              "bikes": 1,
+              "bikes_available_to_rent": 1,
+              "active_place": 1,
+              "bike_racks": 0,
+              "free_racks": 0,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "",
+              "bike_list": [
+                {
+                  "number": "14878",
+                  "bike_type": 431,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551162263,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "14878"
+              ],
+              "bike_types": {
+                "431": 1
+              },
+              "place_type": "12",
+              "rack_locks": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
