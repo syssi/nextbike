@@ -9,7 +9,6 @@ from datetime import timedelta
 import logging
 
 import aiohttp
-import async_timeout
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
     ATTR_LATITUDE,
@@ -108,20 +107,18 @@ MAPS_RESPONSE_SCHEMA = vol.Schema({vol.Required(ATTR_COUNTRIES): [COUNTRY_SCHEMA
 class NextbikeRequestError(Exception):
     """Error to indicate a Nextbike API request has failed."""
 
-    pass
-
 
 async def async_nextbike_request(hass, uri, schema):
     """Perform a request to Nextbike API endpoint, and parse the response."""
     try:
         session = async_get_clientsession(hass)
 
-        async with async_timeout.timeout(REQUEST_TIMEOUT):
+        async with asyncio.timeout(REQUEST_TIMEOUT):
             req = await session.get(DEFAULT_ENDPOINT.format(uri=uri))
 
         json_response = await req.json()
         return schema(json_response)
-    except (asyncio.TimeoutError, aiohttp.ClientError) as ex:
+    except (TimeoutError, aiohttp.ClientError) as ex:
         _LOGGER.error("Could not connect to Nextbike API endpoint: %s", ex)
     except ValueError as ex:
         _LOGGER.error("Received non-JSON data from Nextbike API endpoint: %s", ex)
