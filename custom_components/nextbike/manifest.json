@@ -1,14 +1,12 @@
 {
   "domain": "nextbike",
   "name": "Nextbike integration for Home Assistant",
-  "codeowners": [
-    "@syssi"
-  ],
+  "codeowners": ["@syssi"],
   "config_flow": false,
   "dependencies": [],
   "documentation": "https://github.com/syssi/nextbike",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/syssi/nextbike/issues",
   "requirements": [],
-  "version": "1.2.2"
+  "version": "1.3.0"
 }
