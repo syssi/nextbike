@@ -40,6 +40,7 @@ ATTR_COUNTRIES = "countries"
 
 ATTR_BIKES = "bikes"
 ATTR_DISTANCE = "distance"
+ATTR_E_BIKES = "e_bikes"
 
 ATTR_CLOSEST_LATITUDE = "closest_latitude"
 ATTR_CLOSEST_LONGITUDE = "closest_longitude"
@@ -71,8 +72,12 @@ PLACE_SCHEMA_LONGITUDE = "lng"
 PLACE_SCHEMA_NAME = "name"
 PLACE_SCHEMA_BIKES = "bikes"
 PLACE_SCHEMA_BIKE_NUMBERS = "bike_numbers"
+PLACE_SCHEMA_BIKE_LIST = "bike_list"
 PLACE_SCHEMA_PLACE_TYPE = "place_type"
 PLACE_SCHEMA_TERMINAL_TYPE = "terminal_type"
+
+BIKE_SCHEMA_PEDELEC_BATTERY = "pedelec_battery"
+BIKE_SCHEMA_BATTERY_PACK = "battery_pack"
 
 PLACE_SCHEMA = vol.Schema(
     {
@@ -82,6 +87,7 @@ PLACE_SCHEMA = vol.Schema(
         vol.Required(PLACE_SCHEMA_NAME): cv.string,
         vol.Required(PLACE_SCHEMA_BIKES): cv.positive_int,
         vol.Required(PLACE_SCHEMA_BIKE_NUMBERS): [cv.string],
+        vol.Optional(PLACE_SCHEMA_BIKE_LIST): vol.Any([dict], None),
         vol.Required(PLACE_SCHEMA_PLACE_TYPE): cv.positive_int,
         vol.Required(PLACE_SCHEMA_TERMINAL_TYPE): cv.string,
     },
@@ -190,6 +196,7 @@ class NextbikeSensor(Entity):
         self._longitude = longitude
         self._name = name
         self._state = None
+        self._e_bikes = None
         self._closest_bike = {}
 
     @property
@@ -206,6 +213,7 @@ class NextbikeSensor(Entity):
         """Update sensor state."""
         if self._city.ready.is_set():
             available_bikes = 0
+            e_bikes = 0
             closest_distance = self._radius
             closest_bike = {}
 
@@ -218,6 +226,12 @@ class NextbikeSensor(Entity):
                 )
                 if distance < self._radius:
                     available_bikes += place[PLACE_SCHEMA_BIKES]
+                    for bike in place.get(PLACE_SCHEMA_BIKE_LIST) or []:
+                        if (
+                            bike.get(BIKE_SCHEMA_PEDELEC_BATTERY) is not None
+                            or bike.get(BIKE_SCHEMA_BATTERY_PACK) is not None
+                        ):
+                            e_bikes += 1
 
                 if place[PLACE_SCHEMA_BIKES] > 0 and distance < closest_distance:
                     closest_bike[ATTR_LATITUDE] = place[PLACE_SCHEMA_LATITUDE]
@@ -229,6 +243,7 @@ class NextbikeSensor(Entity):
                     closest_distance = distance
 
             self._state = available_bikes
+            self._e_bikes = e_bikes
             self._closest_bike = closest_bike
 
     @property
@@ -236,6 +251,7 @@ class NextbikeSensor(Entity):
         """Return the extra state attributes."""
         if self._state and self._closest_bike:
             return {
+                ATTR_E_BIKES: self._e_bikes,
                 # The sixth decimal place is a precision of 0.11 m
                 ATTR_CLOSEST_LATITUDE: round(self._closest_bike[ATTR_LATITUDE], 6),
                 ATTR_CLOSEST_LONGITUDE: round(self._closest_bike[ATTR_LONGITUDE], 6),
