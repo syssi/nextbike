@@ -107,8 +107,6 @@ MAPS_RESPONSE_SCHEMA = vol.Schema({vol.Required(ATTR_COUNTRIES): [COUNTRY_SCHEMA
 class NextbikeRequestError(Exception):
     """Error to indicate a Nextbike API request has failed."""
 
-    pass
-
 
 async def async_nextbike_request(hass, uri, schema):
     """Perform a request to Nextbike API endpoint, and parse the response."""
@@ -120,7 +118,7 @@ async def async_nextbike_request(hass, uri, schema):
 
         json_response = await req.json()
         return schema(json_response)
-    except (asyncio.TimeoutError, aiohttp.ClientError) as ex:
+    except (TimeoutError, aiohttp.ClientError) as ex:
         _LOGGER.error("Could not connect to Nextbike API endpoint: %s", ex)
     except ValueError as ex:
         _LOGGER.error("Received non-JSON data from Nextbike API endpoint: %s", ex)
