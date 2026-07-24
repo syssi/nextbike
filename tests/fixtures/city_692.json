@@ -1,0 +1,678 @@
+{
+  "countries": [
+    {
+      "name": "city bike Linz",
+      "cities": [
+        {
+          "uid": 692,
+          "name": "Linz",
+          "places": [
+            {
+              "uid": 40710467,
+              "lat": 48.303189,
+              "lng": 14.289322,
+              "bike": false,
+              "name": "Bethlehemstraße ",
+              "address": "Bethlehemstraße geg. 2 - Landstraße",
+              "spot": true,
+              "number": 41603,
+              "booked_bikes": 0,
+              "bikes": 12,
+              "bikes_available_to_rent": 12,
+              "active_place": 1,
+              "bike_racks": 10,
+              "free_racks": 0,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "sign",
+              "bike_list": [
+                {
+                  "number": "390386",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551072864,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390377",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068831,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390270",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551072788,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390263",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068793,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390192",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068657,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390125",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551069518,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390090",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068328,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390064",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068318,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390031",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068781,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390028",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068856,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390018",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551071763,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390002",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068786,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "390386",
+                "390377",
+                "390270",
+                "390263",
+                "390192",
+                "390125",
+                "390090",
+                "390064",
+                "390031",
+                "390028",
+                "390018",
+                "390002"
+              ],
+              "bike_types": {
+                "150": 12
+              },
+              "place_type": "16",
+              "rack_locks": false
+            },
+            {
+              "uid": 40710691,
+              "lat": 48.301995,
+              "lng": 14.290203,
+              "bike": false,
+              "name": "Harrachstraße-Landstraße",
+              "address": "Harrachstraße bei 2",
+              "spot": true,
+              "number": 41613,
+              "booked_bikes": 0,
+              "bikes": 5,
+              "bikes_available_to_rent": 5,
+              "active_place": 1,
+              "bike_racks": 8,
+              "free_racks": 3,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "sign",
+              "bike_list": [
+                {
+                  "number": "390349",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551070449,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390308",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068407,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390303",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551073096,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390189",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551072972,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390044",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551069616,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "390349",
+                "390308",
+                "390303",
+                "390189",
+                "390044"
+              ],
+              "bike_types": {
+                "150": 5
+              },
+              "place_type": "16",
+              "rack_locks": false
+            },
+            {
+              "uid": 40711732,
+              "lat": 48.304193,
+              "lng": 14.287203,
+              "bike": false,
+              "name": "Promenade ",
+              "address": "Promenade bei 16 (Cafe Traxlmayr)",
+              "spot": true,
+              "number": 41630,
+              "booked_bikes": 0,
+              "bikes": 4,
+              "bikes_available_to_rent": 4,
+              "active_place": 1,
+              "bike_racks": 8,
+              "free_racks": 4,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "sign",
+              "bike_list": [
+                {
+                  "number": "390209",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551070871,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390203",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551070873,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390151",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551071726,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390130",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551071494,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "390209",
+                "390203",
+                "390151",
+                "390130"
+              ],
+              "bike_types": {
+                "150": 4
+              },
+              "place_type": "16",
+              "rack_locks": false
+            },
+            {
+              "uid": 60284404,
+              "lat": 48.337237,
+              "lng": 14.315985,
+              "bike": false,
+              "name": "JKU OIC",
+              "address": "Altenbergerstraße nahe 69",
+              "spot": true,
+              "number": 41641,
+              "booked_bikes": 0,
+              "bikes": 9,
+              "bikes_available_to_rent": 9,
+              "active_place": 1,
+              "bike_racks": 10,
+              "free_racks": 1,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "sign",
+              "bike_list": [
+                {
+                  "number": "390439",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551071803,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390404",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551070489,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390402",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551069583,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390373",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551072882,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390358",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068871,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390259",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551070851,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390170",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551072968,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390048",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551069645,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390016",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551071637,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "390439",
+                "390404",
+                "390402",
+                "390373",
+                "390358",
+                "390259",
+                "390170",
+                "390048",
+                "390016"
+              ],
+              "bike_types": {
+                "150": 9
+              },
+              "place_type": "16",
+              "rack_locks": false
+            },
+            {
+              "uid": 48348290,
+              "lat": 48.335415,
+              "lng": 14.320386,
+              "bike": false,
+              "name": "JKU Kepler Hall",
+              "address": "Altenbergerstraße nahe 49",
+              "spot": true,
+              "number": 41640,
+              "booked_bikes": 0,
+              "bikes": 7,
+              "bikes_available_to_rent": 7,
+              "active_place": 1,
+              "bike_racks": 10,
+              "free_racks": 3,
+              "special_racks": 0,
+              "free_special_racks": 0,
+              "maintenance": false,
+              "terminal_type": "sign",
+              "bike_list": [
+                {
+                  "number": "390446",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068887,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390298",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551071291,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390273",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068926,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390204",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551070872,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390104",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551069519,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390080",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068294,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                },
+                {
+                  "number": "390069",
+                  "bike_type": 150,
+                  "lock_types": [
+                    "frame_lock"
+                  ],
+                  "active": true,
+                  "state": "ok",
+                  "electric_lock": true,
+                  "boardcomputer": 7551068316,
+                  "pedelec_battery": null,
+                  "battery_pack": null
+                }
+              ],
+              "bike_numbers": [
+                "390446",
+                "390298",
+                "390273",
+                "390204",
+                "390104",
+                "390080",
+                "390069"
+              ],
+              "bike_types": {
+                "150": 7
+              },
+              "place_type": "16",
+              "rack_locks": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
