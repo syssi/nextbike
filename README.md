@@ -11,6 +11,8 @@ The nextbike sensor platform monitors bike availability in a chosen radius of th
 
 ## Install
 
+[![Install repository](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=syssi&repository=nextbike&category=integration)
+
 You can install this custom component by adding this repository ([https://github.com/syssi/nextbike](https://github.com/syssi/nextbike/)) to [HACS](https://hacs.xyz/) in the settings menu of HACS first. You will find the custom component in the integration menu afterwards, look for 'Nextbike Integration'. Alternatively, you can install it manually by copying the custom_component folder to your Home Assistant configuration folder.
 
 
